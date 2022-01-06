@@ -10,6 +10,8 @@ function App() {
         <Routes>
           <Route path="/" element={<P.Start />} />
           <Route path="/plan" element={<P.Plan />} />
+          <Route path="/login" element={<P.Login />} />
+          <Route path="/share" element={<P.Share />} />
         </Routes>
       </BrowserRouter>
     </>
