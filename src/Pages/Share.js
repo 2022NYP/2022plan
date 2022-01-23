@@ -1,10 +1,10 @@
 import React from 'react'
-import { Header, PlanPage, Footer } from '../Components'
+import { Header, Footer, SharePage } from '../Components'
 const Share = () => {
   return (
     <>
       <Header />
-      <PlanPage />
+      <SharePage />
       <Footer />
     </>
   )
