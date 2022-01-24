@@ -5,7 +5,7 @@ export const userName = atom({
   default: '',
 })
 
-export const Profile = atom({
+export const userProfile = atom({
   key: 'Profile',
   default: '',
 })

@@ -3,10 +3,10 @@ import { NavLink, Link } from 'react-router-dom'
 import * as S from './style'
 import * as I from '../../Assets'
 import { useRecoilState } from 'recoil'
-import { Profile } from '../../Atom'
+import { userProfile } from '../../Atom'
 
 const Header = () => {
-  const [userProfile, setProfile] = useRecoilState(Profile)
+  const [profile, setProfile] = useRecoilState(userProfile)
   return (
     <S.Header>
       <S.Container>
@@ -31,7 +31,7 @@ const Header = () => {
         </NavLink>
       </S.Container>
       <Link to="/user">
-        <img src={userProfile} alt=""></img>
+        <img src={profile} alt=""></img>
       </Link>
     </S.Header>
   )
