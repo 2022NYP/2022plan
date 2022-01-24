@@ -10,6 +10,8 @@ export const ShareItem = styled.div`
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin-bottom: 30px;
+  overflow: hidden;
+
   .profile {
     width: 60px;
     height: 60px;
@@ -17,10 +19,19 @@ export const ShareItem = styled.div`
     border-radius: 50%;
     margin-right: 40px;
   }
+  * {
+    /* overflow: scroll; */
+  }
 `
 
 export const Content = styled.div``
 
 export const Title = styled.div`
   margin-bottom: 15px;
+`
+
+export const Text = styled.div`
+  height: 100%;
+  width: 986px;
+  height: 64px;
 `

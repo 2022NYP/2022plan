@@ -14,28 +14,14 @@ export const MainSection = styled.div`
 `
 
 export const Title = styled.div`
-  font-size: 36px;
+  font-size: 24px;
   text-align: center;
   padding: 70px;
 `
 
-export const PlanSection = styled.div`
+export const ShareSection = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 1690px;
+  width: 62vw;
   margin: 0 auto;
-`
-
-export const PlusBtn = styled.div`
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  height: 330px;
-  background: rgba(242, 242, 242, 0.5);
-  font-size: 60px;
-  cursor: pointer;
-  :hover {
-    background: rgba(244, 244, 244, 0.5);
-  }
 `
