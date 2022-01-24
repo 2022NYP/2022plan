@@ -1,1 +1,7 @@
-export { userName, userProfile } from './AtomContainer'
+export {
+  userName,
+  userProfile,
+  userMail,
+  plan,
+  modalVisible,
+} from './AtomContainer'

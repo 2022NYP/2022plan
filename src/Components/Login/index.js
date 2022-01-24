@@ -1,11 +1,11 @@
 import React from 'react'
-import { userProfile, userName } from '../../Atom'
+import { userProfile, userName, userMail } from '../../Atom'
 import { useNavigate } from 'react-router-dom'
 import * as S from './style'
 import * as I from '../../Assets'
 import GoogleLogin from 'react-google-login'
 import api from '../../api.js'
-import { useRecoilState, useSetRecoilState } from 'recoil'
+import { useRecoilState } from 'recoil'
 
 const LoginPage = () => {
   const navigate = useNavigate()
@@ -13,10 +13,12 @@ const LoginPage = () => {
     '625161595668-667irjaah6c338grk6pv6gjddg44n5sb.apps.googleusercontent.com'
   const [name, setName] = useRecoilState(userName)
   const [profile, setProfile] = useRecoilState(userProfile)
+  const [mail, setMail] = useRecoilState(userMail)
   const onSuccess = res => {
     console.log(res)
     setName(res.profileObj.name)
     setProfile(res.profileObj.imageUrl)
+    setMail(res.profileObj.email)
     navigate('/plan')
   }
 

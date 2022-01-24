@@ -13,6 +13,7 @@ export const MainSection = styled.div`
   &:nth-child(4n) {
     margin-right: 0;
   }
+
   textarea {
     width: 100%;
     border: 0;
@@ -25,8 +26,6 @@ export const MainSection = styled.div`
   textarea:focus {
     outline: 0;
   }
-
-
 `
 
 export const Title = styled.div`
@@ -50,9 +49,16 @@ export const Content = styled.div`
       #fff0a5,
       #fff0a5,
       #fff0a5 30px,
-      #000 30px,
+      #000 31px,
       #000 31px,
       #fff0a5 31px
     );
+    overflow: scroll;
+    & {
+      -ms-overflow-style: none;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 `

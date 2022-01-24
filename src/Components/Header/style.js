@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 export const Header = styled.div`
+  position: relative;
   height: 70px;
   padding: 0 5.5vw;
   display: flex;
@@ -7,10 +8,16 @@ export const Header = styled.div`
   font-size: 18px;
   justify-content: space-between;
   background: #f9cb68;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.55);
-
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   @media (max-width: 640px) {
     padding: 0 5vw;
+    a {
+      margin-left: 20px;
+    }
+    svg {
+      width: 100px;
+      height: 26px;
+    }
   }
 
   a {
@@ -20,9 +27,6 @@ export const Header = styled.div`
   }
 
   @media (max-width: 640px) {
-    a {
-      margin-left: 20px;
-    }
   }
 
   img {

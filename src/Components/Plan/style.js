@@ -1,20 +1,26 @@
 import styled from 'styled-components'
-import haha from '../../Assets/Background.svg'
+import Background from '../../Assets/Background.svg'
 
 export const MainSection = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   padding-bottom: 55px;
-  background-image: url(${haha});
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  height: 243vh;
-  overflow: hidden;
+  background-image: url(${Background});
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 78.09vh;
+  overflow: scroll;
+  & {
+    -ms-overflow-style: none;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 export const Title = styled.div`
-  font-size: 36px;
+  font-size: 24px;
   text-align: center;
   padding: 70px;
 `
@@ -24,6 +30,9 @@ export const PlanSection = styled.div`
   flex-wrap: wrap;
   width: 89vw;
   margin: 0 auto;
+  justify-content: center;
+  @media (max-width: 640px) {
+  }
 `
 
 export const PlusBtn = styled.div`
@@ -35,7 +44,8 @@ export const PlusBtn = styled.div`
   background: rgba(242, 242, 242, 0.5);
   font-size: 60px;
   cursor: pointer;
-  :hover {
-    background: rgba(244, 244, 244, 0.5);
+  &:hover {
+    transform: scale(0.9);
+    transition: 0.3s;
   }
 `

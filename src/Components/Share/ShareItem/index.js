@@ -1,23 +1,14 @@
 import React from 'react'
 import * as S from './style'
+import { useRecoilState } from 'recoil'
+import { plan } from '../../../Atom'
 
 const ShareItem = () => {
-  const shared = [
-    {
-      title: '테스트1',
-      content: '테스트1',
-      img: '',
-    },
-    {
-      title: '테스트2',
-      content:
-        '어쩌구 저쩌구 asdfasdf 어쩌구 저쩌구 asdfasdf 어쩌구 저쩌구 asdfasdf 어쩌구 저쩌구 asdfasdf 어쩌구 저쩌구 asdfasdf 어쩌구 저쩌구 asdfasdf 어쩌구 저쩌구 asdfasdf 어쩌구 저쩌구 asdfasdf 어쩌구 저쩌구 asdfasdf 어쩌구 저쩌구 asdfasdf 어쩌구 저쩌구 asdfasdf 어쩌구 저쩌구 asdfasdf 어쩌구 저쩌구 asdfasdf어쩌구 저쩌구 asdfasdf어쩌구 저쩌구 asdfasdf어쩌구 저쩌구 asdfasdf어쩌구 저쩌구 asdfasdf어쩌구 저쩌구 asdfasdf 어쩌구 저쩌구 asdfasdf',
-      img: '',
-    },
-  ]
+  const [test, setTest] = useRecoilState(plan)
+
   return (
     <>
-      {shared.map((item, index) => {
+      {test.map((item, index) => {
         return (
           <S.ShareItem>
             <img src={item.img} className="profile"></img>

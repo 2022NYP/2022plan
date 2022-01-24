@@ -13,7 +13,6 @@ function App() {
           <Route path="/" element={<P.Login />} />
           <Route path="/plan" element={<P.Plan />} />
           <Route path="/share" element={<P.Share />} />
-          <Route path="/user" element={<P.User />} />
         </Routes>
       </BrowserRouter>
     </>

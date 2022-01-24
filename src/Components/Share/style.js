@@ -1,16 +1,22 @@
 import styled from 'styled-components'
-import haha from '../../Assets/Background.svg'
+import Background from '../../Assets/Background.svg'
 
 export const MainSection = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   padding-bottom: 55px;
-  background-image: url(${haha});
+  background-image: url(${Background});
   background-repeat: no-repeat;
   background-size: cover;
-  height: 243vh;
-  overflow: hidden;
+  height: 78.1vh;
+  overflow: scroll;
+  & {
+    -ms-overflow-style: none;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 export const Title = styled.div`

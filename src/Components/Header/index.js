@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import * as S from './style'
 import * as I from '../../Assets'
 import { useRecoilState } from 'recoil'
-import { userProfile } from '../../Atom'
+import { userProfile, modalVisible } from '../../Atom'
+import UserModal from '../User'
 
 const Header = () => {
   const [profile, setProfile] = useRecoilState(userProfile)
+  const [show, setShow] = useState(modalVisible)
   return (
     <S.Header>
       <S.Container>
@@ -30,9 +32,9 @@ const Header = () => {
           남 계획
         </NavLink>
       </S.Container>
-      <Link to="/user">
-        <img src={profile} alt=""></img>
-      </Link>
+      <span onClick={() => setShow(!show)}>
+        <img src={profile} alt="" />
+      </span>
     </S.Header>
   )
 }
