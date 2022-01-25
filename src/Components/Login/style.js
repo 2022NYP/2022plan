@@ -1,26 +1,26 @@
 import styled from 'styled-components'
+import LoginBackground from '../../Assets/LoginBackground.svg'
+
 export const MainSection = styled.div`
   overflow: hidden;
   height: 100vh;
   background-color: #000000;
-  svg {
-    position: absolute;
-  }
+  background-image: url(${LoginBackground});
+  background-repeat: no-repeat;
+
   button {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    width: 460px;
+    width: 300px;
     height: 80px;
     font-family: 'KOTRA' !important;
     color: #000 !important;
     font-size: 18px !important;
     margin: 0 auto;
   }
-  * {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export const Title = styled.div`
@@ -31,6 +31,7 @@ export const Title = styled.div`
   margin: 150px 0 23px;
   font-weight: bold;
 `
+
 export const SubTitle = styled.div`
   color: #ffffff;
   font-family: 'Malgun Gothic';

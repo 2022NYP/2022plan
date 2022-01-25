@@ -9,11 +9,10 @@ import { useRecoilState } from 'recoil'
 
 const LoginPage = () => {
   const navigate = useNavigate()
-  const clientId =
-    '625161595668-667irjaah6c338grk6pv6gjddg44n5sb.apps.googleusercontent.com'
   const [name, setName] = useRecoilState(userName)
   const [profile, setProfile] = useRecoilState(userProfile)
   const [mail, setMail] = useRecoilState(userMail)
+
   const onSuccess = res => {
     console.log(res)
     setName(res.profileObj.name)
@@ -25,16 +24,15 @@ const LoginPage = () => {
   return (
     <>
       <S.MainSection>
-        <I.LoginBackground></I.LoginBackground>
         <S.Title>Welcome to new year plan</S.Title>
         <S.SubTitle>새해가 밝았습니다 신년계획을 작성해 보세요</S.SubTitle>
         <GoogleLogin
+          clientId={process.env.CLIENT_ID}
           buttonText="Sign in with Google"
           accessType="offline"
           responseType="permission"
           approvalPrompt="force"
           prompt="consent"
-          clientId={clientId}
           onSuccess={onSuccess}
           className="googleLogin"
         ></GoogleLogin>
