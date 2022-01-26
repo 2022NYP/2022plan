@@ -12,7 +12,7 @@ const LoginPage = () => {
   const [name, setName] = useRecoilState(userName)
   const [profile, setProfile] = useRecoilState(userProfile)
   const [mail, setMail] = useRecoilState(userMail)
-
+  
   const onSuccess = res => {
     console.log(res)
     setName(res.profileObj.name)
@@ -27,7 +27,7 @@ const LoginPage = () => {
         <S.Title>Welcome to new year plan</S.Title>
         <S.SubTitle>새해가 밝았습니다 신년계획을 작성해 보세요</S.SubTitle>
         <GoogleLogin
-          clientId={process.env.CLIENT_ID}
+          clientId={process.env.REACT_APP_URL}
           buttonText="Sign in with Google"
           accessType="offline"
           responseType="permission"
