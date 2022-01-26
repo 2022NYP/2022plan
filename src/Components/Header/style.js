@@ -9,6 +9,21 @@ export const Header = styled.div`
   justify-content: space-between;
   background: #f9cb68;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+
+  a {
+    margin-left: 50px;
+    color: #000;
+    line-height: 65px;
+  }
+
+  .headerProfile {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
   @media (max-width: 640px) {
     padding: 0 5vw;
     a {
@@ -20,24 +35,26 @@ export const Header = styled.div`
     }
   }
 
-  a {
-    margin-left: 50px;
-    color: #000;
-    line-height: 65px;
-  }
-
-  @media (max-width: 640px) {
-  }
-
-  img {
-    display: block;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
+  @media (max-width: 500px) {
+    a {
+      margin-left: 40px;
+      font-size: 16px;
+    }
+    svg {
+      width: 70px;
+      height: 20px;
+    }
   }
 `
 export const Container = styled.div`
   height: 70px;
   display: flex;
   align-items: center;
+`
+
+export const ModalSection = styled.div`
+  position: absolute;
+  top: 70px;
+  width: 89.5vw;
+  z-index: 2;
 `
