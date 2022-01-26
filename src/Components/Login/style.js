@@ -24,12 +24,14 @@ export const MainSection = styled.div`
 `
 
 export const Title = styled.div`
-  font-size: 36px;
   margin-bottom: 14px;
   font-family: 'Malgun Gothic';
   font-size: 70px;
   margin: 150px 0 23px;
   font-weight: bold;
+  @media (max-width: 640px) {
+    font-size: 32px;
+  }
 `
 
 export const SubTitle = styled.div`
@@ -37,4 +39,8 @@ export const SubTitle = styled.div`
   font-family: 'Malgun Gothic';
   font-size: 24px;
   margin-bottom: 345px;
+  @media (max-width: 640px) {
+    font-size: 18px;
+    margin-bottom: 200px;
+  }
 `

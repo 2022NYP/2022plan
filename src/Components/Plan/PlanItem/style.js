@@ -13,6 +13,9 @@ export const MainSection = styled.div`
   &:nth-child(4n) {
     margin-right: 0;
   }
+  @media (max-width: 960px) {
+    margin-right: 0;
+  }
 
   textarea {
     width: 100%;
