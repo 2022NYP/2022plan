@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import { useRecoilState } from 'recoil'
 import { userName, userProfile, userMail, modalVisible } from '../../Atom'
 import * as S from './style'
-
-import { GoogleLogout } from 'react-google-login'
 import { useEffect } from 'react'
 
 const UserModal = () => {
@@ -26,6 +24,7 @@ const UserModal = () => {
 
   const navigate = useNavigate()
   const TryLogOut = () => {
+    setShow(false)
     navigate('/')
   }
 

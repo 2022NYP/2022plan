@@ -1,22 +1,22 @@
 import React from 'react'
 import * as S from './style'
 import { useRecoilState } from 'recoil'
-import { plan } from '../../../Atom'
+import { shared } from '../../../Atom'
 
 const ShareItem = () => {
-  const [test, setTest] = useRecoilState(plan)
+  const [share, setShare] = useRecoilState(shared)
 
   return (
     <>
-      {test.map((item, index) => {
+      {share.map((item, index) => {
         return (
-          <S.ShareItem>
-            <img src={item.img} className="profile"></img>
-            <S.Content>
+          <S.MainSection>
+            <img src={item.img} className="profile" alt="" />
+            <div>
               <S.Title>{item.title}</S.Title>
               <S.Text>{item.content}</S.Text>
-            </S.Content>
-          </S.ShareItem>
+            </div>
+          </S.MainSection>
         )
       })}
     </>

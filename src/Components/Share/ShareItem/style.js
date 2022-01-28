@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ShareItem = styled.div`
+export const MainSection = styled.div`
   display: flex;
   width: 100%;
   background-color: #fff0a5;
@@ -23,8 +23,6 @@ export const ShareItem = styled.div`
     /* overflow: scroll; */
   }
 `
-
-export const Content = styled.div``
 
 export const Title = styled.div`
   margin-bottom: 15px;

@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import * as S from './style'
 import ShareItem from './ShareItem'
+import ShareList from './ShareList'
 
 const SharePage = () => {
   return (
@@ -10,6 +11,7 @@ const SharePage = () => {
         <S.ShareSection>
           <ShareItem></ShareItem>
         </S.ShareSection>
+        <ShareList></ShareList>
       </S.MainSection>
     </>
   )
