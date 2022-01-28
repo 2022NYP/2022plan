@@ -20,6 +20,16 @@ export const plan = atom({
   default: [],
 })
 
+export const shared = atom({
+  key: 'shared',
+  default: [],
+})
+
+export const saved = atom({
+  key: 'saved',
+  default: [],
+})
+
 export const modalVisible = atom({
   key: 'modalVisible',
   default: false,

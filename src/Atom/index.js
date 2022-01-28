@@ -4,4 +4,6 @@ export {
   userMail,
   plan,
   modalVisible,
+  shared,
+  saved,
 } from './AtomContainer'
