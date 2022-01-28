@@ -6,7 +6,7 @@ import React from 'react'
 import { isLogin } from './Atom'
 import { useRecoilState } from 'recoil'
 
-function App() {
+const App = () => {
   const [login, setLogin] = useRecoilState(isLogin)
   return (
     <>
@@ -18,12 +18,14 @@ function App() {
               <Route path="/" element={<P.Login />} />
               <Route path="/plan" element={<P.Plan />} />
               <Route path="/share" element={<P.Share />} />
+              <Route path="/*" element={<P.NotFound />} />
             </>
           ) : (
             <>
               <Route path="/" element={<P.Login />} />
               <Route path="/plan" element={<P.Plan />} />
               <Route path="/share" element={<P.Share />} />
+              <Route path="/*" element={<P.NotFound />} />
             </>
           )}
         </Routes>
