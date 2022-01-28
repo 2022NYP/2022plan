@@ -1,5 +1,10 @@
 import { atom } from 'recoil'
 
+export const isLogin = atom({
+  key: 'isLogin',
+  default: false,
+})
+
 export const userName = atom({
   key: 'userName',
   default: '',

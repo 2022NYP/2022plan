@@ -2,13 +2,13 @@ import React from 'react'
 import { userProfile, userName, userMail } from '../../Atom'
 import { useNavigate } from 'react-router-dom'
 import * as S from './style'
-import * as I from '../../Assets'
 import GoogleLogin from 'react-google-login'
 import api from '../../api.js'
 import { useRecoilState } from 'recoil'
-import axios from 'axios'
+import { isLogin } from '../../Atom/AtomContainer'
 
 const LoginPage = () => {
+  const [login, setLogin] = useRecoilState(isLogin)
   const navigate = useNavigate()
   const [name, setName] = useRecoilState(userName)
   const [profile, setProfile] = useRecoilState(userProfile)
@@ -22,8 +22,8 @@ const LoginPage = () => {
     setMail(res.profileObj.email)
 
     try {
-      axios
-        .post('http://louis7308.iptime.org:3001/auth/login', {
+      api
+        .post('/auth/login', {
           headers: {
             'Content-Type': `application/json`,
           },
@@ -31,7 +31,8 @@ const LoginPage = () => {
         })
         .then(res => {
           console.log(res)
-          axios.defaults.headers.common['Authorization'] = 'Bearer ' + res.data
+          api.defaults.headers.common['Authorization'] = 'Bearer ' + res.data
+          setLogin(true)
           navigate('/plan')
         })
     } catch (e) {
