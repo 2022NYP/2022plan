@@ -4,7 +4,7 @@ import * as S from './style'
 import * as I from '../../Assets'
 import { useRecoilState } from 'recoil'
 import { userProfile, modalVisible } from '../../Atom'
-import UserModal from '../User'
+import UserModal from './UserModal'
 
 const Header = () => {
   const [profile, setProfile] = useRecoilState(userProfile)

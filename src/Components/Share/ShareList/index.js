@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useRecoilState } from 'recoil'
-import { saved } from '../../../Atom'
+import { saved, shared } from '../../../Atom'
 
 const ShareList = () => {
-  const [save, setPlans] = useRecoilState(saved)
+  const [save, setSave] = useRecoilState(saved)
+  const [share, setShare] = useRecoilState(shared)
+  const [checkedItems, setCheckedItems] = useState()
+  
+  const TryShare = () => {
+    console.log(save)
+    console.log(share)
+  }
   return (
     <div>
       {save.map(ele => {
@@ -14,7 +21,7 @@ const ShareList = () => {
           </div>
         )
       })}
-      <button>공유하기</button>
+      <button onClick={TryShare}>공유하기</button>
     </div>
   )
 }

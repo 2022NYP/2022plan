@@ -17,10 +17,10 @@ const LoginPage = () => {
   const onSuccess = res => {
     console.log(res)
     console.log(res.tokenId)
-
     setName(res.profileObj.name)
     setProfile(res.profileObj.imageUrl)
     setMail(res.profileObj.email)
+
     try {
       axios
         .post('http://louis7308.iptime.org:3001/auth/login', {
@@ -37,17 +37,6 @@ const LoginPage = () => {
     } catch (e) {
       console.log(e)
     }
-
-    // axios
-    //   .post('http://louis7308.iptime.org:3001/auth/login', {
-    //     tokenId: res.tokenId,
-    //   })
-    //   .then(res => {
-    //     console.log(res)
-    //   })
-    //   .catch(err => {
-    //     console.log(err)
-    //   })
   }
 
   return (

@@ -1,7 +1,7 @@
-import React, { useState, useRef } from 'react'
+import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useRecoilState } from 'recoil'
-import { userName, userProfile, userMail, modalVisible } from '../../Atom'
+import { userName, userProfile, userMail, modalVisible } from '../../../Atom'
 import * as S from './style'
 import { useEffect } from 'react'
 

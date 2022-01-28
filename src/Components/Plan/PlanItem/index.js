@@ -17,6 +17,7 @@ const PlanItem = props => {
     setSave(save.concat(data))
     console.log(save)
   }
+
   return (
     <>
       <S.MainSection>
