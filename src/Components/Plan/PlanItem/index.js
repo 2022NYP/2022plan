@@ -11,16 +11,23 @@ const PlanItem = props => {
 
   useEffect(() => {
     setData({ title: title, content: content, id: props.i })
-    console.log(data)
+    // console.log(data)
   }, [title, content])
-  const save = () => {
-    console.log(test)
+
+  const save = props => {
+    console.log(data)
+    console.log(test[props.i])
+    console.log(data.id)
   }
   return (
     <>
       <S.MainSection>
         <S.Title>
-          <textarea type="text" value={title} onChange={e => {}}></textarea>
+          <textarea
+            type="text"
+            value={title}
+            onChange={e => setTitle(e.target.value)}
+          ></textarea>
         </S.Title>
         <S.Content>
           <textarea

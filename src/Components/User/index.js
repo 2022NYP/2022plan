@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useRecoilState } from 'recoil'
 import { userName, userProfile, userMail, modalVisible } from '../../Atom'
 import * as S from './style'
@@ -12,17 +13,22 @@ const UserModal = () => {
   const [mail, setMail] = useRecoilState(userMail)
 
   const [show, setShow] = useRecoilState(modalVisible)
-  const modalEl = useRef() //
+  const modalEl = useRef()
   const handleClickOutside = ({ target }) => {
     if (show && !modalEl.current.contains(target)) setShow(false)
   }
-  console.log(show)
   useEffect(() => {
     window.addEventListener('click', handleClickOutside)
     return () => {
       window.removeEventListener('click', handleClickOutside)
     }
   })
+
+  const navigate = useNavigate()
+  const TryLogOut = () => {
+    navigate('/')
+  }
+
   return (
     <>
       {show ? (
@@ -39,7 +45,7 @@ const UserModal = () => {
               <span>이메일</span>
               {mail}
             </S.Content>
-            <S.LogOut>로그아웃</S.LogOut>
+            <S.LogOut onClick={TryLogOut}>로그아웃</S.LogOut>
           </S.MainSection>
         </>
       ) : null}
