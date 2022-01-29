@@ -3,10 +3,9 @@ import { userProfile, userName, userMail } from '../../Atom'
 import { useNavigate } from 'react-router-dom'
 import * as S from './style'
 import GoogleLogin from 'react-google-login'
-import api from '../../api.js'
 import { useRecoilState } from 'recoil'
 import { isLogin } from '../../Atom/AtomContainer'
-
+import axios from 'axios'
 const LoginPage = () => {
   const [login, setLogin] = useRecoilState(isLogin)
   const navigate = useNavigate()
@@ -22,7 +21,7 @@ const LoginPage = () => {
     setMail(res.profileObj.email)
 
     try {
-      api
+      axios
         .post('/auth/login', {
           headers: {
             'Content-Type': `application/json`,
@@ -31,7 +30,7 @@ const LoginPage = () => {
         })
         .then(res => {
           console.log(res)
-          api.defaults.headers.common['Authorization'] = 'Bearer ' + res.data
+          axios.defaults.headers.common['Authorization'] = 'Bearer ' + res.data
           setLogin(true)
           navigate('/plan')
         })
