@@ -1,28 +1,40 @@
 import React, { useState } from 'react'
 import { useRecoilState } from 'recoil'
 import { saved, shared } from '../../../Atom'
+import * as S from './style'
 
 const ShareList = () => {
   const [save, setSave] = useRecoilState(saved)
   const [share, setShare] = useRecoilState(shared)
-  const [checkedItems, setCheckedItems] = useState()
-  
-  const TryShare = () => {
-    console.log(save)
-    console.log(share)
+  const [isChecked, setChecked] = useState()
+
+  const TryShare = props => {
+    console.log(isChecked)
   }
+
+  const TryChecked = (ele, e) => {
+    setChecked(!isChecked)
+    setChecked(ele.id)
+  }
+
   return (
-    <div>
-      {save.map(ele => {
+    <S.MainSection>
+      {save.map((ele, index) => {
         return (
-          <div>
-            {ele.title}
-            <input type="checkbox"></input>
-          </div>
+          <S.ShareList>
+            <input
+              type="radio"
+              name="share"
+              onClick={() => {
+                TryChecked(ele)
+              }}
+            ></input>
+            <S.Title>{ele.title}</S.Title>
+          </S.ShareList>
         )
       })}
       <button onClick={TryShare}>공유하기</button>
-    </div>
+    </S.MainSection>
   )
 }
 
