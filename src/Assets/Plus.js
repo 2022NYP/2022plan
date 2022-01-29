@@ -13,8 +13,8 @@ const Plus = () => {
         <path
           d="M23 43V3M3 23H43"
           stroke="black"
-          stroke-width="5"
-          stroke-linecap="round"
+          strokeWidth="5"
+          strokeLinecap="round"
         />
       </svg>
     </>
