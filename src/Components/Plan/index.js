@@ -18,9 +18,13 @@ const PlanPage = () => {
           ))}
           <S.PlusBtn
             onClick={() => {
-              setPlans(
-                plans.concat({ title: '제목 입력', content: '내용 입력' })
-              )
+              if (plans.length >= 19) {
+                alert('계획의 한도 수를 초과하였습니다.')
+              } else {
+                setPlans(
+                  plans.concat({ title: '제목 입력', content: '내용 입력' })
+                )
+              }
             }}
           >
             <I.Plus></I.Plus>

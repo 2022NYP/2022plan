@@ -7,7 +7,7 @@ a {
 }
 @font-face {
   font-family: 'KOTRA';
-  src: url('./font/KOTRA_SONGEULSSI.otf');
+  src: url('./font/KOTRA_SONGEULSSI.ttf');
 }
 
 *::-webkit-scrollbar {

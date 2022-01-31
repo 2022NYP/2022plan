@@ -13,8 +13,36 @@ export const MainSection = styled.div`
   &:nth-child(4n) {
     margin-right: 0;
   }
-  @media (max-width: 960px) {
-    margin-right: 0;
+
+  @media screen and (max-width: 1750px) {
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:nth-child(4n) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (max-width: 1415px) {
+    &:nth-child(2n) {
+      margin-right: 0;
+      background-color: red;
+    }
+    &:nth-child(3n) {
+      margin-right: 30px;
+    }
+    &:nth-child(6n) {
+      margin-right: 0;
+      background-color: red;
+    }
+  }
+
+  @media screen and (max-width: 935px) {
+    &:nth-child(3n) {
+      margin-right: 0px;
+    }
+    margin: 0;
+    margin-bottom: 30px;
   }
 
   textarea {

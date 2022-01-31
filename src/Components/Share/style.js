@@ -9,8 +9,9 @@ export const MainSection = styled.div`
   background-image: url(${Background});
   background-repeat: no-repeat;
   background-size: cover;
-  height: 78.1vh;
+  height: 100vh;
   overflow: scroll;
+
   & {
     -ms-overflow-style: none;
   }

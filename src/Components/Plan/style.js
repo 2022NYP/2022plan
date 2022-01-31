@@ -1,21 +1,29 @@
 import styled from 'styled-components'
 import Background from '../../Assets/Background.svg'
-
+import MobileBackground from '../../Assets/MobileBackground.svg'
+export const Main = styled.div`
+  height: 100vh;
+`
 export const MainSection = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   padding-bottom: 55px;
   background-image: url(${Background});
-  background-repeat: no-repeat;
   background-size: cover;
-  height: 78.09vh;
   overflow: scroll;
+  height: 100%;
   & {
     -ms-overflow-style: none;
   }
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  @media (max-width: 500px) {
+    background-image: none;
+    background-color: #f6d284;
+    background-size: cover;
   }
 `
 
