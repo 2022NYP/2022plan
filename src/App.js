@@ -1,13 +1,13 @@
-import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import * as P from './Pages'
-import GlobalStyle from './Components/GlobalStyle'
-import React from 'react'
-import { isLogin } from './Atom'
-import { useRecoilState } from 'recoil'
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import * as P from "./Pages";
+import GlobalStyle from "./Components/GlobalStyle";
+import React from "react";
+import { isLogin } from "./Atom";
+import { useRecoilState } from "recoil";
 
 const App = () => {
-  const [login, setLogin] = useRecoilState(isLogin)
+  const [login, setLogin] = useRecoilState(isLogin);
   return (
     <>
       <GlobalStyle />
@@ -31,7 +31,7 @@ const App = () => {
         </Routes>
       </BrowserRouter>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
