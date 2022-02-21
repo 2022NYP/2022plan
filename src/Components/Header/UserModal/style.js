@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const MainSection = styled.div`
   * {
-    font-family: 'Noto Sans';
+    font-family: "Noto Sans";
   }
 
   display: flex;
@@ -22,7 +22,7 @@ export const MainSection = styled.div`
     height: 300px;
     padding: 30px 35px 20px;
   }
-`
+`;
 
 export const ProfileSection = styled.div`
   width: 100%;
@@ -39,7 +39,7 @@ export const ProfileSection = styled.div`
   @media (max-width: 500px) {
     padding-bottom: 20px;
   }
-`
+`;
 
 export const Content = styled.div`
   display: flex;
@@ -53,7 +53,7 @@ export const Content = styled.div`
   span {
     color: #989898;
   }
-`
+`;
 
 export const LogOut = styled.div`
   margin-top: 50px;
@@ -63,4 +63,4 @@ export const LogOut = styled.div`
   @media (max-width: 500px) {
     margin-top: 30px;
   }
-`
+`;

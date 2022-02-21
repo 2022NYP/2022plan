@@ -1,7 +1,7 @@
-import React from 'react'
-import * as S from './style'
-import ShareItem from './ShareItem'
-import ShareList from './ShareList'
+import React from "react";
+import * as S from "./style";
+import ShareItem from "./ShareItem";
+import ShareList from "./ShareList";
 
 const SharePage = () => {
   return (
@@ -14,7 +14,7 @@ const SharePage = () => {
         <ShareList></ShareList>
       </S.MainSection>
     </>
-  )
-}
+  );
+};
 
-export default SharePage
+export default SharePage;

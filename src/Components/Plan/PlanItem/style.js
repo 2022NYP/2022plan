@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const MainSection = styled.div`
   display: inline-block;
@@ -51,13 +51,13 @@ export const MainSection = styled.div`
     background-color: #fff0a5;
     line-height: 31px;
     resize: none;
-    font-family: 'KOTRA';
+    font-family: "KOTRA";
     overflow: hidden;
   }
   textarea:focus {
     outline: 0;
   }
-`
+`;
 
 export const Title = styled.div`
   height: 45px;
@@ -67,7 +67,7 @@ export const Title = styled.div`
     text-align: center;
     height: 100%;
   }
-`
+`;
 
 export const Content = styled.div`
   textarea {
@@ -92,4 +92,4 @@ export const Content = styled.div`
       display: none;
     }
   }
-`
+`;

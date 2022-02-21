@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Footer = styled.div`
   height: 80px;
@@ -8,4 +8,4 @@ export const Footer = styled.div`
   align-items: center;
   color: #fff;
   font-size: 18px;
-`
+`;

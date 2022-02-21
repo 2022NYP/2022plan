@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 export const Header = styled.div`
   position: relative;
   height: 70px;
@@ -45,16 +45,16 @@ export const Header = styled.div`
       height: 20px;
     }
   }
-`
+`;
 export const Container = styled.div`
   height: 70px;
   display: flex;
   align-items: center;
-`
+`;
 
 export const ModalSection = styled.div`
   position: absolute;
   top: 70px;
   width: 89.5vw;
   z-index: 2;
-`
+`;

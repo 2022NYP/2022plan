@@ -1,41 +1,41 @@
-import { atom } from 'recoil'
+import { atom } from "recoil";
 
 export const isLogin = atom({
-  key: 'isLogin',
+  key: "isLogin",
   default: false,
-})
+});
 
 export const userName = atom({
-  key: 'userName',
-  default: '',
-})
+  key: "userName",
+  default: "",
+});
 
 export const userMail = atom({
-  key: 'userMail',
-  default: '',
-})
+  key: "userMail",
+  default: "",
+});
 
 export const userProfile = atom({
-  key: 'Profile',
-  default: '',
-})
+  key: "Profile",
+  default: "",
+});
 
 export const plan = atom({
-  key: 'plan',
+  key: "plan",
   default: [],
-})
+});
 
 export const shared = atom({
-  key: 'shared',
+  key: "shared",
   default: [],
-})
+});
 
 export const saved = atom({
-  key: 'saved',
+  key: "saved",
   default: [],
-})
+});
 
 export const modalVisible = atom({
-  key: 'modalVisible',
+  key: "modalVisible",
   default: false,
-})
+});

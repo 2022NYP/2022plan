@@ -1,9 +1,11 @@
-import styled from 'styled-components'
-import Background from '../../Assets/Background.svg'
-import MobileBackground from '../../Assets/MobileBackground.svg'
+import styled from "styled-components";
+import Background from "../../Assets/Background.svg";
+import MobileBackground from "../../Assets/MobileBackground.svg";
+
 export const Main = styled.div`
   height: 100vh;
-`
+`;
+
 export const MainSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -25,13 +27,13 @@ export const MainSection = styled.div`
     background-color: #f6d284;
     background-size: cover;
   }
-`
+`;
 
 export const Title = styled.div`
   font-size: 24px;
   text-align: center;
   padding: 70px;
-`
+`;
 
 export const PlanSection = styled.div`
   display: flex;
@@ -41,7 +43,7 @@ export const PlanSection = styled.div`
   justify-content: center;
   @media (max-width: 640px) {
   }
-`
+`;
 
 export const PlusBtn = styled.div`
   display: inline-flex;
@@ -56,4 +58,4 @@ export const PlusBtn = styled.div`
     transform: scale(0.9);
     transition: 0.3s;
   }
-`
+`;

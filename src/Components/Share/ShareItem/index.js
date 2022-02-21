@@ -1,10 +1,10 @@
-import React from 'react'
-import * as S from './style'
-import { useRecoilState } from 'recoil'
-import { shared } from '../../../Atom'
+import React from "react";
+import * as S from "./style";
+import { useRecoilState } from "recoil";
+import { shared } from "../../../Atom";
 
 const ShareItem = () => {
-  const [share, setShare] = useRecoilState(shared)
+  const [share, setShare] = useRecoilState(shared);
 
   return (
     <>
@@ -17,10 +17,10 @@ const ShareItem = () => {
               <S.Text>{item.content}</S.Text>
             </div>
           </S.MainSection>
-        )
+        );
       })}
     </>
-  )
-}
+  );
+};
 
-export default ShareItem
+export default ShareItem;

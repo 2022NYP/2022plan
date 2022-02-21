@@ -1,43 +1,43 @@
-import React from 'react'
-import { userProfile, userName, userMail } from '../../Atom'
-import { useNavigate } from 'react-router-dom'
-import * as S from './style'
-import GoogleLogin from 'react-google-login'
-import { useRecoilState } from 'recoil'
-import { isLogin } from '../../Atom/AtomContainer'
-import axios from 'axios'
+import React from "react";
+import { userProfile, userName, userMail } from "../../Atom";
+import { useNavigate } from "react-router-dom";
+import * as S from "./style";
+import GoogleLogin from "react-google-login";
+import { useRecoilState } from "recoil";
+import { isLogin } from "../../Atom/AtomContainer";
+import axios from "axios";
 const LoginPage = () => {
-  const [login, setLogin] = useRecoilState(isLogin)
-  const navigate = useNavigate()
-  const [name, setName] = useRecoilState(userName)
-  const [profile, setProfile] = useRecoilState(userProfile)
-  const [mail, setMail] = useRecoilState(userMail)
+  const [login, setLogin] = useRecoilState(isLogin);
+  const navigate = useNavigate();
+  const [name, setName] = useRecoilState(userName);
+  const [profile, setProfile] = useRecoilState(userProfile);
+  const [mail, setMail] = useRecoilState(userMail);
 
-  const onSuccess = res => {
-    console.log(res)
-    console.log(res.tokenId)
-    setName(res.profileObj.name)
-    setProfile(res.profileObj.imageUrl)
-    setMail(res.profileObj.email)
+  const onSuccess = (res) => {
+    console.log(res);
+    console.log(res.tokenId);
+    setName(res.profileObj.name);
+    setProfile(res.profileObj.imageUrl);
+    setMail(res.profileObj.email);
 
     try {
       axios
-        .post('/auth/login', {
+        .post("/auth/login", {
           headers: {
-            'Content-Type': `application/json`,
+            "Content-Type": `application/json`,
           },
           tokenId: res.tokenId,
         })
-        .then(res => {
-          console.log(res)
-          axios.defaults.headers.common['Authorization'] = 'Bearer ' + res.data
-          setLogin(true)
-          navigate('/plan')
-        })
+        .then((res) => {
+          console.log(res);
+          axios.defaults.headers.common["Authorization"] = "Bearer " + res.data;
+          setLogin(true);
+          navigate("/plan");
+        });
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
-  }
+  };
 
   return (
     <>
@@ -56,7 +56,7 @@ const LoginPage = () => {
         ></GoogleLogin>
       </S.MainSection>
     </>
-  )
-}
+  );
+};
 
-export default LoginPage
+export default LoginPage;

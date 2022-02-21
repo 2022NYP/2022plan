@@ -1,32 +1,32 @@
-import React, { useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useRecoilState } from 'recoil'
-import { userName, userProfile, userMail, modalVisible } from '../../../Atom'
-import * as S from './style'
-import { useEffect } from 'react'
+import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { userName, userProfile, userMail, modalVisible } from "../../../Atom";
+import * as S from "./style";
+import { useEffect } from "react";
 
 const UserModal = () => {
-  const [name, setName] = useRecoilState(userName)
-  const [profile, setProfile] = useRecoilState(userProfile)
-  const [mail, setMail] = useRecoilState(userMail)
+  const [name, setName] = useRecoilState(userName);
+  const [profile, setProfile] = useRecoilState(userProfile);
+  const [mail, setMail] = useRecoilState(userMail);
 
-  const [show, setShow] = useRecoilState(modalVisible)
-  const modalEl = useRef()
+  const [show, setShow] = useRecoilState(modalVisible);
+  const modalEl = useRef();
   const handleClickOutside = ({ target }) => {
-    if (show && !modalEl.current.contains(target)) setShow(false)
-  }
+    if (show && !modalEl.current.contains(target)) setShow(false);
+  };
   useEffect(() => {
-    window.addEventListener('click', handleClickOutside)
+    window.addEventListener("click", handleClickOutside);
     return () => {
-      window.removeEventListener('click', handleClickOutside)
-    }
-  })
+      window.removeEventListener("click", handleClickOutside);
+    };
+  });
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const TryLogOut = () => {
-    setShow(false)
-    navigate('/')
-  }
+    setShow(false);
+    navigate("/");
+  };
 
   return (
     <>
@@ -49,7 +49,7 @@ const UserModal = () => {
         </>
       ) : null}
     </>
-  )
-}
+  );
+};
 
-export default UserModal
+export default UserModal;

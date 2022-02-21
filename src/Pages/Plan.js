@@ -1,5 +1,5 @@
-import React from 'react'
-import { Header, PlanPage, Footer } from '../Components'
+import React from "react";
+import { Header, PlanPage, Footer } from "../Components";
 const Plan = () => {
   return (
     <>
@@ -7,7 +7,7 @@ const Plan = () => {
       <PlanPage />
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Plan
+export default Plan;

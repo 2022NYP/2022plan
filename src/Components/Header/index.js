@@ -1,14 +1,14 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import * as S from './style'
-import * as I from '../../Assets'
-import { useRecoilState } from 'recoil'
-import { userProfile, modalVisible } from '../../Atom'
-import UserModal from './UserModal'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import * as S from "./style";
+import * as I from "../../Assets";
+import { useRecoilState } from "recoil";
+import { userProfile, modalVisible } from "../../Atom";
+import UserModal from "./UserModal";
 
 const Header = () => {
-  const [profile, setProfile] = useRecoilState(userProfile)
-  const [show, setShow] = useRecoilState(modalVisible)
+  const [profile, setProfile] = useRecoilState(userProfile);
+  const [show, setShow] = useRecoilState(modalVisible);
   return (
     <S.Header>
       <S.Container>
@@ -16,8 +16,8 @@ const Header = () => {
         <NavLink
           to="/plan"
           style={({ isActive }) => ({
-            borderBottom: isActive ? '5px solid #88400C' : 'none',
-            borderRadius: isActive ? '5px' : 'none',
+            borderBottom: isActive ? "5px solid #88400C" : "none",
+            borderRadius: isActive ? "5px" : "none",
           })}
         >
           내 계획
@@ -25,8 +25,8 @@ const Header = () => {
         <NavLink
           to="/share"
           style={({ isActive }) => ({
-            borderBottom: isActive ? '5px solid #88400C' : 'none',
-            borderRadius: isActive ? '5px' : 'none',
+            borderBottom: isActive ? "5px solid #88400C" : "none",
+            borderRadius: isActive ? "5px" : "none",
           })}
         >
           남 계획
@@ -39,7 +39,7 @@ const Header = () => {
         <UserModal></UserModal>
       </S.ModalSection>
     </S.Header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

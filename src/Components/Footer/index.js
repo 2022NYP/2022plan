@@ -1,8 +1,8 @@
-import React from 'react'
-import * as S from './style'
+import React from "react";
+import * as S from "./style";
 
 const Footer = () => {
-  return <S.Footer>개발 : 전승원, 유시온</S.Footer>
-}
+  return <S.Footer>개발 : 전승원, 유시온</S.Footer>;
+};
 
-export default Footer
+export default Footer;

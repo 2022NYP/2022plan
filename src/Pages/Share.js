@@ -1,5 +1,5 @@
-import React from 'react'
-import { Header, Footer, SharePage } from '../Components'
+import React from "react";
+import { Header, Footer, SharePage } from "../Components";
 const Share = () => {
   return (
     <>
@@ -7,7 +7,7 @@ const Share = () => {
       <SharePage />
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Share
+export default Share;

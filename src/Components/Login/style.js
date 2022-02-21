@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import LoginBackground from '../../Assets/LoginBackground.svg'
+import styled from "styled-components";
+import LoginBackground from "../../Assets/LoginBackground.svg";
 
 export const MainSection = styled.div`
   overflow: hidden;
@@ -13,7 +13,7 @@ export const MainSection = styled.div`
     border-radius: 5px;
     width: 300px;
     height: 80px;
-    font-family: 'KOTRA' !important;
+    font-family: "KOTRA" !important;
     color: #000 !important;
     font-size: 18px !important;
     margin: 0 auto;
@@ -21,26 +21,26 @@ export const MainSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 export const Title = styled.div`
   margin-bottom: 14px;
-  font-family: 'Malgun Gothic';
+  font-family: "Malgun Gothic";
   font-size: 70px;
   margin: 150px 0 23px;
   font-weight: bold;
   @media (max-width: 640px) {
     font-size: 32px;
   }
-`
+`;
 
 export const SubTitle = styled.div`
   color: #ffffff;
-  font-family: 'Malgun Gothic';
+  font-family: "Malgun Gothic";
   font-size: 24px;
   margin-bottom: 345px;
   @media (max-width: 640px) {
     font-size: 18px;
     margin-bottom: 200px;
   }
-`
+`;

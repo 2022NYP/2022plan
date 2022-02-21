@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const MainSection = styled.div`
   display: flex;
@@ -22,14 +22,14 @@ export const MainSection = styled.div`
   * {
     /* overflow: scroll; */
   }
-`
+`;
 
 export const Title = styled.div`
   margin-bottom: 15px;
-`
+`;
 
 export const Text = styled.div`
   height: 100%;
   width: 986px;
   height: 64px;
-`
+`;

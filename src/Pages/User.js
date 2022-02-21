@@ -1,5 +1,5 @@
-import React from 'react'
-import { Footer, Header, UserModal } from '../Components'
+import React from "react";
+import { Footer, Header, UserModal } from "../Components";
 
 const User = () => {
   return (
@@ -7,7 +7,7 @@ const User = () => {
       <Header />
       <UserModal />
     </>
-  )
-}
+  );
+};
 
-export default User
+export default User;
