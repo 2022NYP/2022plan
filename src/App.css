@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "KOTRA";
+  src: url("./font/KOTRA_SONGEULSSI.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +9,9 @@
 a {
   text-decoration: none;
 }
-
-@font-face {
+body {
   font-family: "KOTRA";
-  src: url("./font/KOTRA_SONGEULSSI.ttf");
 }
-
 *::-webkit-scrollbar {
   width: 16px;
 }
